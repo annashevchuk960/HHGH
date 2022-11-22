@@ -3,6 +3,7 @@ try:
     if 0 >= number :
         raise Exception('number can not be <= 0 ')
     print('#>-----<MENU>------<#')
+    print('|  Show degree0 |')
     print('|  Show degree1 |')
     print('|  Show degree2 |')
     print('|  Show degree3 |')
@@ -15,6 +16,9 @@ try:
     if action == 'degree1':
         degree1=number
         print(degree1)
+    elif action == 'degree0':
+        degree0= (1)
+        print(1)
     elif action == 'degree2':
         degree2= (number * number)
         print(degree2)
