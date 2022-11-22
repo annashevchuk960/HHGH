@@ -1,42 +1,32 @@
 try:
-    number = int(input('number->'))
-    if 0 >= number :
-        raise Exception('number can not be <= 0 ')
+    hour = int(input('hour->'))
+    minute = int(input('minute->'))
+    second = int(input('second->'))
+    if 0 > hour :
+        raise Exception('hour can not be <  0 ')
+    if 0 > minute :
+        raise Exception('minute can not be <  0 ')
+    if 0 > second :
+        raise Exception('second can not be <  0 ')
+    kievstar = float(input('kievstar->'))
+    mts = float(input('mts->'))
+    life= float(input('life->'))
     print('#>-----<MENU>------<#')
-    print('|  Show degree0 |')
-    print('|  Show degree1 |')
-    print('|  Show degree2 |')
-    print('|  Show degree3 |')
-    print('|  Show degree4 |')
-    print('|  Show degree5 |')
-    print('|  Show degree6 |')
-    print('|  Show degree7 |')
+    print('|   kievstar |')
+    print('|     mts     |')
+    print('|    life    |')
     print('#>------------------<#')
-    action = input('action->')
-    if action == 'degree1':
-        degree1=number
-        print(degree1)
-    elif action == 'degree0':
-        degree0= (1)
-        print(1)
-    elif action == 'degree2':
-        degree2= (number * number)
-        print(degree2)
-    elif action == 'degree3':
-        degree3= (number * number * number)
-        print(degree3)
-    elif action == 'degree4':
-        degree4= (number * number * number * number)
-        print(degree4)
-    elif action == 'degree5':
-        degree5= (number * number * number * number * number)
-        print(degree5)
-    elif action == 'degree6':
-        degree6= (number * number * number * number * number * number)
-        print(degree6)
-    elif action == 'degree7':
-        degree7= (number * number * number * number * number* number * number)
-        print(degree7)
+    action = input('->')
+    time = ((hour * 3600)+(minute * 60) + second )
+    if action == 'kievstar':
+        kievstar = (((kievstar * 100)/60) * time / 100  )
+        print(kievstar)
+    elif action == 'life':
+        life = (((life * 100)/60) * time / 100 )
+        print(life)
+    elif action == 'mts':
+        mts = (((mts * 100)/60) * time / 100 )
+        print(mts)
     else:
         print(f'Comand not found')
 except ValueError as vl_ex:
