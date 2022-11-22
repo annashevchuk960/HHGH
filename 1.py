@@ -1,33 +1,46 @@
 try:
-    hour = int(input('hour->'))
-    minute = int(input('minute->'))
-    second = int(input('second->'))
-    if 0 > hour :
-        raise Exception('hour can not be <  0 ')
-    if 0 > minute :
-        raise Exception('minute can not be <  0 ')
-    if 0 > second :
-        raise Exception('second can not be <  0 ')
-    kievstar = float(input('kievstar->'))
-    mts = float(input('mts->'))
-    life= float(input('life->'))
+    manager1 = int(input('summafirstmanager->'))
+    manager2 = int(input('summasecondmanager->'))
+    manager3 = int(input('summathirdmanager->'))
     print('#>-----<MENU>------<#')
-    print('|   kievstar |')
-    print('|     mts     |')
-    print('|    life    |')
+    print('|   manager1 |')
+    print('|     manager2    |')
+    print('|    manager3    |')
     print('#>------------------<#')
     action = input('->')
-    time = ((hour * 3600)+(minute * 60) + second )
-    if action == 'kievstar':
-        kievstar = (((kievstar * 100)/60) * time / 100  )
-        print(kievstar)
-    elif action == 'life':
-        life = (((life * 100)/60) * time / 100 )
-        print(life)
-    elif action == 'mts':
-        mts = (((mts * 100)/60) * time / 100 )
-        print(mts)
+    if action == 'manager1':
+        if manager1 <= 500:
+            summa1 = (200+(200 * 3 / 100))
+        elif 500 < manager1 > 1000:
+            summa1 = (200+(200 * 5 / 100))
+        elif manager1 > 1000:
+            summa1 = (200+(200 * 8 / 100))
+        print(summa1)
+    elif action == 'manager2':
+        if manager2 <= 500:
+            summa2 = (200+(200 * 3 / 100))
+        elif 500 < manager2 > 1000:
+            summa2 = (200+(200 * 5 / 100))
+        elif manager2 > 1000:
+            summa2 = (200+(200 * 8 / 100))
+        print(summa2)
+    elif action == 'manager1':
+        if manager1 <= 500:
+            summa3 = (200+(200 * 3 / 100))
+        elif 500 < manager1 > 1000:
+            summa3 = (200+(200 * 5 / 100))
+        elif manager1 > 1000:
+            summa3 = (200+(200 * 8 / 100))
+        print(summa3)
+    elif action == 'max3':
+        if summa2 < summa1 > summa3
+        total1=(summa1 + 200)
+        elif summa1 < summa2 > summa3
+        total2 = (summa2 + 200)
+        elif summa2 < summa3 > summa1
+        total1 = (summa3 + 200)
     else:
         print(f'Comand not found')
 except ValueError as vl_ex:
     print(f'Value error: {vl_ex}')
+output()
